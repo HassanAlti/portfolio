@@ -12,6 +12,6 @@ export const ContactFormSchema = z.object({
   message: z.string().min(1, { message: 'Message is required.' })
 })
 
-export const NewsletterFormSchema = z.object({
-  email: z.string().email('Invalid email.')
-})
+// export const NewsletterFormSchema = z.object({
+//   email: z.string().email('Invalid email.')
+// })
