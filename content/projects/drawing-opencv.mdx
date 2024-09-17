@@ -1,0 +1,54 @@
+---
+  title: Drawing Game with OpenCV Contour Matching
+  summary: A web-based drawing game built using Next.js, TypeScript, Tailwind CSS, and OpenCV for image similarity comparison, with MongoDB for high scores.
+  image: /images/projects/draw-game.png
+  author: 'Hassan Alti'
+  publishedAt: '2024-09-15'
+---
+
+This drawing game allows users to draw on a canvas and compares their drawings
+to an original image using OpenCV's contour matching technique. With a focus on
+providing fun and challenging gameplay, the app also incorporates authentication
+and high score tracking.
+
+Explore the [GitHub repository](https://github.com/HassanAlti/Drawing-Game) to
+dive deeper into the codebase or try out the
+[live demo](https://drawing-game-open-cv.vercel.app/).
+
+## Features
+
+- **Canvas Drawing**: Users can create drawings on a canvas using simple drawing
+  tools.
+- **Image Similarity with OpenCV**: The app uses OpenCV's contour matching
+  algorithm to compare user drawings with a reference image and calculate a
+  similarity score.
+- **Authentication**: Users can sign up, log in, and keep track of their
+  progress with secured authentication.
+- **High Score Tracking**: MongoDB is used to store and display high scores,
+  encouraging competitive gameplay.
+
+## Technologies
+
+- **Next.js**: The React framework used for building the web app, with support
+  for server actions and dynamic routing.
+- **TypeScript**: Used to ensure type safety and code clarity.
+- **Tailwind CSS**: A utility-first CSS framework for styling the app and
+  ensuring responsiveness across devices.
+- **OpenCV**: A computer vision library used for contour detection and image
+  comparison.
+- **MongoDB**: A NoSQL database used for storing user data, drawings, and high
+  scores.
+
+## Visual Examples
+
+Here are some examples showcasing the contour matching process:
+
+- ![Contour Example 1](/images/cmp3.png)
+- ![Contour Example 2](/images/cmp2.png)
+
+To learn more about the mathematical method behind the image similarity, you can
+check out
+[Hausdorff Distance](https://en.wikipedia.org/wiki/Hausdorff_distance).
+
+For more context on OpenCV's contour matching, explore this discussion in the
+[OpenCV Forum](https://forum.opencv.org/t/using-opencv-for-image-similarity/6444/13).
