@@ -41,7 +41,7 @@ export default function ContactForm() {
   }
 
   return (
-    <section className='relative'>
+    <section className='relative' id='contact'>
       {/* Background pattern */}
       <svg
         className='absolute inset-0 -z-10 h-full w-full stroke-zinc-200 opacity-75 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] dark:stroke-zinc-700'
@@ -138,17 +138,11 @@ export default function ContactForm() {
             <Button
               type='submit'
               disabled={isSubmitting}
-              className='w-full disabled:opacity-50'
+              className='w-full bg-[#2e8b57] disabled:opacity-50'
             >
               {isSubmitting ? 'Submitting...' : 'Contact Me'}
             </Button>
           </div>
-          <p className='mt-4 text-xs text-muted-foreground'>
-            By submitting this form, I agree to the{' '}
-            <Link href='/privacy' className='font-bold'>
-              privacy&nbsp;policy.
-            </Link>
-          </p>
         </form>
       </div>
     </section>

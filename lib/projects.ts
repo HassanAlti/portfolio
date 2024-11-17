@@ -1,3 +1,5 @@
+'use server'
+
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
@@ -32,24 +34,28 @@ export async function getProjectBySlug(slug: string): Promise<Project | null> {
 export async function getProjects(limit?: number): Promise<ProjectMetadata[]> {
   const files = fs.readdirSync(rootDirectory)
 
-  const projects = files
-    .map(file => getProjectMetadata(file))
-    .sort((a, b) => {
-      if (new Date(a.publishedAt ?? '') < new Date(b.publishedAt ?? '')) {
-        return 1
-      } else {
-        return -1
-      }
-    })
+  const projects = await Promise.all(
+    files.map(file => getProjectMetadata(file))
+  )
+
+  const sortedProjects = projects.sort((a, b) => {
+    if (new Date(a.publishedAt ?? '') < new Date(b.publishedAt ?? '')) {
+      return 1
+    } else {
+      return -1
+    }
+  })
 
   if (limit) {
-    return projects.slice(0, limit)
+    return sortedProjects.slice(0, limit)
   }
 
-  return projects
+  return sortedProjects
 }
 
-export function getProjectMetadata(filepath: string): ProjectMetadata {
+export async function getProjectMetadata(
+  filepath: string
+): Promise<ProjectMetadata> {
   const slug = filepath.replace(/\.mdx$/, '')
   const filePath = path.join(rootDirectory, filepath)
   const fileContent = fs.readFileSync(filePath, { encoding: 'utf8' })
