@@ -6,6 +6,7 @@ import Providers from '@/components/providers'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import ParticlesBackground from '@/components/ParticlesBackground'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 const playfair = Playfair_Display({
@@ -25,6 +26,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' suppressHydrationWarning>
+      <head>
+        <Script
+          async
+          src='https://www.googletagmanager.com/gtag/js?id=G-W7SG1E0Z9D'
+        ></Script>
+        <Script id='google-analytics'>
+          {`
+    window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-W7SG1E0Z9D');
+    `}
+        </Script>
+      </head>
       <body
         className={cn(
           'relative flex min-h-screen flex-col font-sans antialiased', // Added relative
