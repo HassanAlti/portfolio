@@ -183,7 +183,7 @@ export const Testimonials = () => {
 
                 <blockquote className='mb-6 text-center'>
                   <p className='mb-4 text-lg italic leading-relaxed transition-opacity duration-300 md:text-xl'>
-                    "{testimonial.text}"
+                    &ldquo; {testimonial.text} &rdquo;
                   </p>
                   <footer className='text-sm'>
                     <cite className='not-italic'>
