@@ -41,6 +41,46 @@
     --sh-comment: #a19595;
   }
 
+  /* Custom Scrollbar Styles */
+  ::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(46, 139, 87, 0.1);
+    margin: 4px 0; /* Add margin to show rounded edges */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #2e8b57;
+    border-radius: 20px; /* Increased radius for more visible rounding */
+    border: 2px solid transparent; /* Create padding effect */
+    background-clip: content-box;
+    min-height: 40px; /* Minimum height of thumb */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #236b43;
+    background-clip: content-box;
+  }
+
+  /* Remove scrollbar buttons/arrows */
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  /* Hide scrollbar corner */
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  /* For Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #2e8b57 rgba(46, 139, 87, 0.1);
+  }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -104,5 +144,23 @@
 
   .prose code span {
     @apply font-medium;
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

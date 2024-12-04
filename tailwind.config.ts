@@ -71,11 +71,30 @@ const config = {
         'accordion-up': {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' }
+        },
+        'border-spin': {
+          '0%': { 'stroke-dasharray': '0 999' },
+          '100%': { 'stroke-dasharray': '999 999' }
+        },
+        'pop-color': {
+          '0%': {
+            filter: 'grayscale(100%)',
+            transform: 'scale(1)'
+          },
+          '50%': {
+            transform: 'scale(1.05)'
+          },
+          '100%': {
+            filter: 'grayscale(0%)',
+            transform: 'scale(1)'
+          }
         }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out'
+        'accordion-up': 'accordion-up 0.2s ease-out',
+        'border-progress': 'border-spin 3s linear forwards',
+        'image-pop': 'pop-color 0.5s ease-out forwards'
       }
     }
   },

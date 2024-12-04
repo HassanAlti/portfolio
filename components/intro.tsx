@@ -1,14 +1,15 @@
 import Image from 'next/image'
 import authorImage from '@/public/images/authors/hassan.jpg'
+import { AnimatedProfileImage } from './animatedImage'
 
 export default function Intro() {
   return (
-    <section className='flex flex-col-reverse items-center gap-x-10 gap-y-4 pb-24 md:flex-row md:items-center'>
+    <section className='flex flex-col-reverse items-center gap-x-10 gap-y-4 pb-24 md:flex-row'>
       <div className='mt-2 flex-1 md:mt-0'>
         <h1 className='title no-underline'>
           Hey, I&#39;m <span className='text-[#2e8b57]'>Hassan</span>.
         </h1>
-        <p className='mt-3 font-light text-muted-foreground'>
+        <p className='mt-3 font-light'>
           A skilled <b>Fullstack Software Developer</b> with proven expertise in{' '}
           <b>Web Development</b>. Passionate about learning new technologies and
           building cool stuff.
@@ -35,14 +36,20 @@ export default function Intro() {
           Download CV
         </a>
       </div>
-      <div className='relative flex w-full justify-center md:w-auto'>
-        <Image
+      <div className='flex w-full justify-center md:w-auto'>
+        {/* <Image
           className='flex-1 rounded-lg grayscale md:flex-none'
           src={authorImage}
           alt='Hassan Alti'
           width={200}
           height={200}
           priority
+        /> */}
+        <AnimatedProfileImage
+          src='/images/authors/hassan.jpg'
+          alt='Profile 2'
+          size={200}
+          className='flex-shrink-0'
         />
       </div>
     </section>
