@@ -24,10 +24,7 @@ const experiences: Experience[] = [
 
 export default function Experience() {
   return (
-    <section
-      id='experience'
-      className='relative z-20 bg-white pb-12 dark:bg-black'
-    >
+    <section id='experience' className='relative z-20 pb-12'>
       <h2 className='title mb-12'>
         Work <span className='text-[#2e8b57]'>Experience</span>
       </h2>
@@ -36,7 +33,7 @@ export default function Experience() {
         {experiences.map((exp, idx) => (
           <div
             key={idx}
-            className='relative rounded-xl border border-zinc-200 p-6 dark:border-zinc-700/40'
+            className='relative rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-700/40 dark:bg-black'
           >
             <div className='flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between'>
               <div>
