@@ -93,7 +93,7 @@ const config = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'border-progress': 'border-spin 3s linear forwards',
+        'border-progress': 'border-spin 2s linear forwards',
         'image-pop': 'pop-color 0.5s ease-out forwards'
       }
     }

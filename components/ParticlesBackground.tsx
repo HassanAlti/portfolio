@@ -75,7 +75,7 @@ export default function ParticlesBackground() {
           density: {
             enable: true
           },
-          value: 40 // Number of particles
+          value: 20 // Number of particles
         },
         opacity: {
           value: 1

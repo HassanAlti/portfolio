@@ -26,7 +26,7 @@ export const AnimatedProfileImage = ({
     if (isHovering) {
       timeoutRef.current = window.setTimeout(() => {
         setIsCompleted(true)
-      }, 3000)
+      }, 2000)
     } else {
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current)
@@ -55,7 +55,6 @@ export const AnimatedProfileImage = ({
         alt={alt}
         className={cn(
           'h-full w-full rounded-lg object-cover transition-transform duration-300',
-          !isCompleted && 'grayscale',
           isCompleted && 'animate-image-pop'
         )}
       />
