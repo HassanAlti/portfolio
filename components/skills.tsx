@@ -17,6 +17,17 @@ const skills = [
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg'
   },
   {
+    name: '.NET Core',
+    url: 'https://dotnet.microsoft.com/',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg'
+  },
+  {
+    name: 'C#',
+    url: 'https://learn.microsoft.com/en-us/dotnet/csharp/',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg'
+  },
+
+  {
     name: 'React',
     url: 'https://reactjs.org/',
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg'
@@ -32,7 +43,11 @@ const skills = [
     url: 'https://www.mongodb.com/',
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg'
   },
-
+  {
+    name: 'Bootstrap',
+    url: 'https://getbootstrap.com/',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg'
+  },
   {
     name: 'Laravel',
     url: 'https://www.laravel.com/',
@@ -50,11 +65,6 @@ const skills = [
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg'
   },
   {
-    name: 'Firebase',
-    url: 'https://firebase.google.com/',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg'
-  },
-  {
     name: 'Redis',
     url: 'https://redis.io/',
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg'
@@ -68,6 +78,11 @@ const skills = [
     name: 'Docker',
     url: 'https://www.docker.com/',
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg'
+  },
+  {
+    name: 'JQuery',
+    url: 'https://jquery.com/',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg'
   },
   {
     name: 'AWS',
