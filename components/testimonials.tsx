@@ -62,20 +62,6 @@ export const Testimonials = () => {
     useState(false)
   const componentRef = useRef<HTMLDivElement>(null)
 
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) {
-      emblaApi.scrollPrev()
-      resetAutoplay()
-    }
-  }, [emblaApi])
-
-  const scrollNext = useCallback(() => {
-    if (emblaApi) {
-      emblaApi.scrollNext()
-      resetAutoplay()
-    }
-  }, [emblaApi])
-
   const resetAutoplay = useCallback(() => {
     if (autoplayInterval) {
       clearInterval(autoplayInterval)
@@ -85,6 +71,20 @@ export const Testimonials = () => {
     }, 8000)
     setAutoplayInterval(newInterval)
   }, [emblaApi, autoplayInterval])
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) {
+      emblaApi.scrollPrev()
+      resetAutoplay()
+    }
+  }, [emblaApi, resetAutoplay])
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) {
+      emblaApi.scrollNext()
+      resetAutoplay()
+    }
+  }, [emblaApi, resetAutoplay])
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return
@@ -117,13 +117,14 @@ export const Testimonials = () => {
       { threshold: 0.2 }
     )
 
-    if (componentRef.current) {
-      observer.observe(componentRef.current)
+    const currentRef = componentRef.current
+    if (currentRef) {
+      observer.observe(currentRef)
     }
 
     return () => {
-      if (componentRef.current) {
-        observer.unobserve(componentRef.current)
+      if (currentRef) {
+        observer.unobserve(currentRef)
       }
     }
   }, [hasShownInitialAnimation, resetAutoplay])
