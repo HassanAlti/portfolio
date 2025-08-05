@@ -23,9 +23,9 @@ const experiences: Experience[] = [
     ]
   },
   {
-    title: 'Full Stack Web Developer',
+    title: 'Full Stack Web Developer (Freelancing)',
     company: 'Upwork',
-    period: '09/2022 - Present',
+    period: '09/2022 - 08/2024',
     location: 'Remote',
     logo: '/images/upwork_logo.png',
     highlights: [
@@ -71,6 +71,15 @@ export default function Experience() {
                     {exp.company === 'Elephants Ride' ? (
                       <a
                         href='https://www.linkedin.com/company/elephants-ride/'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='hover:underline'
+                      >
+                        {exp.company}
+                      </a>
+                    ) : exp.company === 'Upwork' ? (
+                      <a
+                        href='https://upwork.com'
                         target='_blank'
                         rel='noopener noreferrer'
                         className='hover:underline'
