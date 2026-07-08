@@ -16,6 +16,7 @@ const experiences: Experience[] = [
     logo: '/images/elephants_logo.jpeg',
     highlights: [
       'Built Rihlatech, a B2B travel booking platform for GCC companies - aggregates hotel and flight data from multiple API vendors and normalizes it all into one search.',
+      'Stack is TypeScript, Next.js, React with TanStack for state management, and PostgreSQL on the backend.',
       'Reduced hotel search time from 20-30 seconds to 3-7 seconds with real-time indexing, mapping layers, and parallel vendor calls.',
       'Set up an AI itinerary agent (LangChain) that searches the web for travel plans and answers user questions, backed by scrapers and cron jobs keeping data fresh.',
       'Translated Figma designs into responsive interfaces and joined planning meetings to keep technical work aligned with what the business actually needed.',
