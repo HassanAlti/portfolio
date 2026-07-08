@@ -1,6 +1,7 @@
 'use client'
 
 import { useRef, useState, useEffect } from 'react'
+import Image from 'next/image'
 
 interface AppScreenshotsProps {
   images: {
@@ -9,7 +10,7 @@ interface AppScreenshotsProps {
   }[]
 }
 
-export default function AppScreenshots({ images }: AppScreenshotsProps) {
+export default function AppScreenshots({ images = [] }: AppScreenshotsProps) {
   const scrollRef = useRef<HTMLDivElement>(null)
   const [canScrollLeft, setCanScrollLeft] = useState(false)
   const [canScrollRight, setCanScrollRight] = useState(true)
@@ -109,10 +110,12 @@ export default function AppScreenshots({ images }: AppScreenshotsProps) {
             style={{ scrollSnapAlign: 'start' }}
           >
             <div className='relative h-[480px] w-[240px] overflow-hidden rounded-2xl border-2 border-foreground/10 shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl'>
-              <img
+              <Image
                 src={image.src}
                 alt={image.alt}
-                className='h-full w-full object-cover'
+                fill
+                className='object-cover'
+                sizes='240px'
                 loading='lazy'
               />
             </div>

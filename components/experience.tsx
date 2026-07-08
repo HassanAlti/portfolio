@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 interface Experience {
   title: string
   company: string
@@ -53,11 +55,13 @@ export default function Experience() {
         {experiences.map((exp, idx) => (
           <div key={idx} className='relative mb-12 last:mb-0'>
             {/* Company logo as timeline node */}
-            <div className='absolute left-0 flex h-16 w-16 items-center justify-center rounded-full border-4 border-white bg-white shadow-lg dark:border-zinc-900 dark:bg-zinc-900'>
-              <img
+            <div className='absolute left-0 flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border-4 border-white bg-white shadow-lg dark:border-zinc-900 dark:bg-zinc-900'>
+              <Image
                 src={exp.logo}
                 alt={`${exp.company} logo`}
-                className='h-10 w-10 rounded-full object-cover'
+                width={40}
+                height={40}
+                className='rounded-full object-cover'
               />
             </div>
 

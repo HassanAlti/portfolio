@@ -182,3 +182,44 @@
 .scrollbar-thin::-webkit-scrollbar-thumb:hover {
   background-color: hsl(var(--muted-foreground) / 0.4);
 }
+
+/* App screenshot carousel for MDX */
+.screenshot-carousel {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 16px 4px;
+  margin: 16px 0 24px;
+}
+
+.screenshot-carousel::-webkit-scrollbar {
+  height: 4px;
+}
+
+.screenshot-carousel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.screenshot-carousel::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.2);
+  border-radius: 2px;
+}
+
+.screenshot-carousel img {
+  height: 420px;
+  width: auto;
+  flex-shrink: 0;
+  border-radius: 16px;
+  border: 2px solid hsl(var(--border));
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+.screenshot-carousel img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
