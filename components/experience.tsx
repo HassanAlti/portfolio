@@ -15,11 +15,11 @@ const experiences: Experience[] = [
     location: 'Remote',
     logo: '/images/elephants_logo.jpeg',
     highlights: [
-      'Built scalable applications using TypeScript, PostgreSQL, Next.js, and React with TanStack for enhanced API integration and state management.',
-      'Designed and implemented cron jobs and data scrapers while integrating multiple API vendors into unified services.',
-      'Translated Figma designs into responsive, user-friendly interfaces and participated in management meetings to align technical solutions with business objectives.',
-      'Refactored legacy codebase into clean, maintainable architecture and mentored junior developers on debugging techniques and best practices.',
-      'Collaborated with vendor API support teams to optimize integrations and managed project timelines with accurate delivery estimates.'
+      'Built Rihlatech, a B2B travel booking platform for GCC companies - aggregates hotel and flight data from multiple API vendors and normalizes it all into one search.',
+      'Reduced hotel search time from 20-30 seconds to 3-7 seconds with real-time indexing, mapping layers, and parallel vendor calls.',
+      'Set up an AI itinerary agent (LangChain) that searches the web for travel plans and answers user questions, backed by scrapers and cron jobs keeping data fresh.',
+      'Translated Figma designs into responsive interfaces and joined planning meetings to keep technical work aligned with what the business actually needed.',
+      'Mentored 2 junior developers daily - quick debugging help, system design discussions, and hands-on support to get their tasks shipped faster.'
     ]
   },
   {
