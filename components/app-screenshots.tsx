@@ -43,17 +43,17 @@ export default function AppScreenshots({ images }: AppScreenshotsProps) {
     <div className='relative my-8'>
       {/* Fade edges */}
       {canScrollLeft && (
-        <div className='absolute left-0 top-0 bottom-0 z-10 w-12 bg-gradient-to-r from-background to-transparent pointer-events-none' />
+        <div className='pointer-events-none absolute bottom-0 left-0 top-0 z-10 w-12 bg-gradient-to-r from-background to-transparent' />
       )}
       {canScrollRight && (
-        <div className='absolute right-0 top-0 bottom-0 z-10 w-12 bg-gradient-to-l from-background to-transparent pointer-events-none' />
+        <div className='pointer-events-none absolute bottom-0 right-0 top-0 z-10 w-12 bg-gradient-to-l from-background to-transparent' />
       )}
 
       {/* Scroll buttons */}
       {canScrollLeft && (
         <button
           onClick={() => scroll('left')}
-          className='absolute left-0 top-1/2 -translate-y-1/2 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-background/80 border shadow-md hover:bg-background transition-all'
+          className='absolute left-0 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border bg-background/80 shadow-md transition-all hover:bg-background'
           aria-label='Scroll left'
         >
           <svg
@@ -74,7 +74,7 @@ export default function AppScreenshots({ images }: AppScreenshotsProps) {
       {canScrollRight && (
         <button
           onClick={() => scroll('right')}
-          className='absolute right-0 top-1/2 -translate-y-1/2 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-background/80 border shadow-md hover:bg-background transition-all'
+          className='absolute right-0 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border bg-background/80 shadow-md transition-all hover:bg-background'
           aria-label='Scroll right'
         >
           <svg
@@ -96,7 +96,7 @@ export default function AppScreenshots({ images }: AppScreenshotsProps) {
       {/* Scrollable container */}
       <div
         ref={scrollRef}
-        className='flex gap-4 overflow-x-auto scroll-smooth px-4 py-6 scrollbar-thin'
+        className='scrollbar-thin flex gap-4 overflow-x-auto scroll-smooth px-4 py-6'
         style={{
           scrollSnapType: 'x mandatory',
           WebkitOverflowScrolling: 'touch'
@@ -108,7 +108,7 @@ export default function AppScreenshots({ images }: AppScreenshotsProps) {
             className='flex-shrink-0'
             style={{ scrollSnapAlign: 'start' }}
           >
-            <div className='relative h-[480px] w-[240px] overflow-hidden rounded-2xl border-2 border-foreground/10 shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02]'>
+            <div className='relative h-[480px] w-[240px] overflow-hidden rounded-2xl border-2 border-foreground/10 shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl'>
               <img
                 src={image.src}
                 alt={image.alt}
