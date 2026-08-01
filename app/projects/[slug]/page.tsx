@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import type { Metadata } from 'next'
 
 import { formatDate } from '@/lib/utils'
 import MDXContent from '@/components/mdx-content'
@@ -12,6 +13,25 @@ export async function generateStaticParams() {
   const slugs = projects.map(project => ({ slug: project.slug }))
 
   return slugs
+}
+
+export async function generateMetadata({
+  params
+}: {
+  params: { slug: string }
+}): Promise<Metadata> {
+  const project = await getProjectBySlug(params.slug)
+
+  if (!project?.metadata.noIndex) {
+    return {}
+  }
+
+  return {
+    robots: {
+      index: false,
+      follow: false
+    }
+  }
 }
 
 export default async function Project({

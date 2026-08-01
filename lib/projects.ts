@@ -17,6 +17,7 @@ export type ProjectMetadata = {
   image?: string
   author?: string
   publishedAt?: string
+  noIndex?: boolean
   slug: string
 }
 
