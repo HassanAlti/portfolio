@@ -1,5 +1,13 @@
+import type { Metadata } from 'next'
 import Projects from '@/components/projects'
 import { getProjects } from '@/lib/projects'
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false
+  }
+}
 
 export default async function ProjectsPage() {
   const projects = await getProjects()
